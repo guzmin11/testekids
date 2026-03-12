@@ -173,7 +173,16 @@ h2 { font-family: var(--serif); font-size: clamp(22px, 3.2vw, 36px); font-weight
 .blist { display: flex; flex-direction: column; gap: 12px; margin-top: 40px; }
 .brow { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--r-lg); padding: 20px 24px; display: grid; grid-template-columns: 1fr 110px auto auto; gap: 18px; align-items: center; transition: box-shadow .18s; }
 .brow:hover { box-shadow: var(--sh); }
-@media(max-width:740px){ .brow { grid-template-columns: 52px 1fr; } .b-img-col,.b-price-col,.b-chk-col { display: none; } }
+@media(max-width:740px){
+  .headline{font-size:32px;}
+  .subheadline{font-size:18px;}
+  .bcard{grid-template-columns:1fr;text-align:center;}
+  .bicon{margin:0 auto 15px;}
+  .brow{grid-template-columns:1fr; display:flex; flex-direction:column; gap:20px; text-align:center;}
+  .b-img-col { display: block; width: 100%; max-width: 240px; margin: 0 auto; }
+  .pricing{grid-template-columns:1fr;}
+  .tgrid{grid-template-columns:1fr;}
+}
 .bnum { width: 48px; height: 48px; border-radius: 12px; background: var(--teal); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 19px; font-weight: 700; color: #fff; flex-shrink: 0; }
 .btrow-title { font-weight: 700; font-size: 18px; margin-bottom: 8px; color: var(--teal-dk); }
 .btrow-desc { font-size: 13.5px; color: var(--ink-mid); }
