@@ -180,7 +180,7 @@ h2 { font-family: var(--serif); font-size: clamp(22px, 3.2vw, 36px); font-weight
   .bicon{margin:0 auto 15px;}
   .brow{grid-template-columns:1fr; display:flex; flex-direction:column; gap:20px; text-align:center;}
   .b-img-col { display: block; width: 100%; max-width: 240px; margin: 0 auto; }
-  .pricing{grid-template-columns:1fr;}
+  .pricing{grid-template-columns:1fr; gap: 32px; padding-bottom: 40px;}
   .tgrid{grid-template-columns:1fr;}
 }
 .bnum { width: 48px; height: 48px; border-radius: 12px; background: var(--teal); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 19px; font-weight: 700; color: #fff; flex-shrink: 0; }
@@ -208,7 +208,7 @@ h2 { font-family: var(--serif); font-size: clamp(22px, 3.2vw, 36px); font-weight
 .plan-includes { font-size: 12px; font-weight: 700; color: var(--ink-light); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 14px; }
 .plan-feats { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
 .plan-feats li { display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; line-height: 1.5; }
-.plan-feats li svg { width: 14px; color: var(--teal); flex-shrink: 0; margin-top: 3px; }
+.plan-feats li svg { width: 14px; color: #1A7A4A; flex-shrink: 0; margin-top: 3px; }
 .plan-price-area { margin-bottom: 20px; text-align: center; }
 .plan-was { font-size: 14px; color: var(--ink-light); display: flex; align-items: center; justify-content: center; gap: 8px; } .plan-was-price { text-decoration: line-through; text-decoration-color: var(--red-no); text-decoration-thickness: 2px; }
 .plan-save { text-decoration: none; background: #D1EEE0; color: var(--green-ok); font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 6px; margin-left: 7px; vertical-align: middle; }
@@ -272,6 +272,25 @@ strong.price-highlight {
   letter-spacing: -0.5px;
 }
 
+@media(max-width: 740px) {
+  .pricing {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    padding-bottom: 32px;
+    overflow: visible !important;
+  }
+  /* Simples fica em cima (order 1), Premium embaixo (order 2) */
+  .pcard { order: 1 !important; margin-bottom: 16px; }
+  .pcard.featured {
+    order: 2 !important;
+    transform: scale(0.88);
+    transform-origin: top center;
+    margin-top: -8px;
+    opacity: 0.92;
+    margin-bottom: -32px;
+  }
+}
+
 @media(max-width: 480px) {
   .hero { padding: 36px 16px 32px; }
   .sec { padding: 48px 16px; }
@@ -281,8 +300,9 @@ strong.price-highlight {
   .hero-proof { font-size: 15px; flex-direction: column; gap: 6px; }
   .btn-cta, .btn-cta-gold { width: 100%; padding: 20px 24px; font-size: 18px; text-align: center; }
   .brow { padding: 16px; }
-  .pcard { padding: 24px 20px; }
-  .plan-amount { font-size: 48px !important; }
+  .pcard { padding: 24px 18px; }
+  .plan-amount { font-size: 42px !important; }
+  .plan-mockup { max-height: 200px; overflow: hidden; }
 }
 
 .who-list li svg { color: var(--red-no) !important; stroke: var(--red-no) !important; }
@@ -550,11 +570,11 @@ img, svg {
       <div class="who-card who-yes">
         <div class="who-head"><div class="who-badge yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="who-title">É Para Você Se:</div></div>
         <ul class="who-list">
-          <li><svg color="#1A7A4A" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Trabalha no ministério infantil e precisa de material pronto toda semana</li>
-          <li><svg color="#1A7A4A" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Quer ensinar a Bíblia de forma divertida e eficaz</li>
-          <li><svg color="#1A7A4A" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Não tem tempo para criar atividades do zero toda semana</li>
-          <li><svg color="#1A7A4A" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Quer aproximar as crianças da Palavra com criatividade</li>
-          <li><svg color="#1A7A4A" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Busca material 100% bíblico, ilustrado e pronto para usar</li>
+          <li><svg color="#22c55e" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Trabalha no ministério infantil e precisa de material pronto toda semana</li>
+          <li><svg color="#22c55e" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Quer ensinar a Bíblia de forma divertida e eficaz</li>
+          <li><svg color="#22c55e" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Não tem tempo para criar atividades do zero toda semana</li>
+          <li><svg color="#22c55e" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Quer aproximar as crianças da Palavra com criatividade</li>
+          <li><svg color="#22c55e" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Busca material 100% bíblico, ilustrado e pronto para usar</li>
         </ul>
       </div>
       <div class="who-card who-no">
@@ -594,15 +614,17 @@ img, svg {
     <div class="sec-head">
       <div class="bonus-header-tag">🎁 Bônus Exclusivos Inclusos</div>
       <h2>Receba Mais Gratuitamente</h2>
-      <div class="bonus-total">Valor total dos bônus: <s><strong class="price-highlight">R$ 132,50</strong></s> &nbsp;→&nbsp; <strong>GRÁTIS</strong></div>
+      <div class="bonus-total">Valor total dos bônus: <s><strong class="price-highlight">R$ 222,50</strong></s> &nbsp;→&nbsp; <strong>GRÁTIS</strong></div>
     </div>
     <div class="blist">
+      <div class="brow"><div><div class="btrow-title">Bíblia Ilustrada</div><div class="btrow-desc">Bíblia completa com ilustrações coloridas e didáticas, perfeita para ensinar as histórias sagradas de forma visual e envolvendo.</div></div><div class="b-img-col"><img src="biblia_ilustrada.png" alt="Bíblia Ilustrada" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 55,00</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+      <div class="brow"><div><div class="btrow-title">365 Devocionais Infantis</div><div class="btrow-desc">Um devocional para cada dia do ano, ajudando a criar o hábito diário de buscar a Deus.</div></div><div class="b-img-col"><img src="365_devocionais.png" alt="365 Devocionais" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 35,00</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+      <div class="brow"><div><div class="btrow-title">100 devocionais infantis</div><div class="btrow-desc">Histórias curtas e lições preciosas para ler com seu pequeno antes de dormir.</div></div><div class="b-img-col"><img src="100_devocionais.png" alt="100 Devocionais" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 27,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
       <div class="brow"><div><div class="btrow-title">50 Dinâmicas Bíblicas para Crianças</div><div class="btrow-desc">50 brincadeiras prontas para animar sua aula ou momento em família — é só imprimir e aplicar.</div></div><div class="b-img-col"><img src="bonus_dinamicas_50.png" alt="50 Dinâmicas" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 27,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+      <div class="brow"><div><div class="btrow-title">100+ Desenhos para Colorir</div><div class="btrow-desc">Ilustrações lindas com temas bíblicos — horas de propósito e criatividade.</div></div><div class="b-img-col"><img src="bonus_bobbie_goods.png" alt="100+ Desenhos para Colorir" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 22,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
       <div class="brow"><div><div class="btrow-title">52 Versículos para Memorizar</div><div class="btrow-desc">Um versículo por semana o ano todo — para aprender a Palavra de coração.</div></div><div class="b-img-col"><img src="bonus_versiculos_52.png" alt="52 Versículos" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 17,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
       <div class="brow"><div><div class="btrow-title">+250 Caça-palavras Bíblicos</div><div class="btrow-desc">Passatempos que desenvolvem concentração enquanto a criança aprende histórias da Bíblia.</div></div><div class="b-img-col"><img src="bonus_wordsearch.png" alt="Caça-palavras" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 17,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
       <div class="brow"><div><div class="btrow-title">+250 Cruzadinhas Educativas</div><div class="btrow-desc">Fixação do aprendizado bíblico de forma desafiadora e divertida.</div></div><div class="b-img-col"><img src="bonus_crosswords.png" alt="Cruzadinhas" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 17,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-      <div class="brow"><div><div class="btrow-title">+100 devocionais infantis</div><div class="btrow-desc">Histórias curtas e lições preciosas para ler com seu pequeno antes de dormir.</div></div><div class="b-img-col"><img src="bonus_family_activities.png" alt="Atividades em Família" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 27,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-      <div class="brow"><div><div class="btrow-title">100+ Desenhos para Colorir</div><div class="btrow-desc">Ilustrações lindas com temas bíblicos — horas de propósito e criatividade.</div></div><div class="b-img-col"><img src="bonus_bobbie_goods.png" alt="100+ Desenhos para Colorir" style="width: 100%; height: 100%; object-fit: cover;"></div><div class="b-price-col"><div class="b-old"><strong class="price-highlight">R$ 22,90</strong></div><div class="b-now">Hoje: Grátis</div></div><div class="b-chk-col"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div></div>
     </div>
   </div>
 </section>
@@ -622,14 +644,14 @@ img, svg {
         <div class="plan-includes">O QUE ESTÁ INCLUSO:</div>
         <ul class="plan-feats">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>50 Atividades Bíblicas</li>
-          <li style="color: var(--ink-light); text-decoration: line-through;"><svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Bônus Exclusivos</li>
-          <li style="color: var(--ink-light); text-decoration: line-through;"><svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Acesso Vitalício</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Acesso Vitalício</li>
+          <li style="color: var(--ink-light); text-decoration: line-through;"><svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Bônus Exclusivos</li>
         </ul>
         <div class="plan-price-area">
           <div class="plan-cta-label">Por apenas</div>
           <div class="plan-amount">R$ 10,00</div>
         </div>
-        <a href="https://pay.kiwify.com.br/s9S8X1Q" class="btn-basic">Quero a Oferta Simples</a>
+        <a href="#" class="btn-basic" id="btn-oferta-simples">Quero a Oferta Simples</a>
       </div>
 
       <!-- Oferta Mais Completa -->
@@ -642,8 +664,8 @@ img, svg {
         <ul class="plan-feats">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>+2.000 Atividades Bíblicas completas</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Alfabeto Bíblico Infantil Completo</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><strong>2000+ Atividades Bíblicas</strong></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Antigo e Novo Testamento ilustrados</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>365 Devocionais Infantis</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Manual para Ensinar a Orar</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>50 Dinâmicas Bíblicas para Crianças</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>52 Versículos para Memorizar</li>
@@ -779,5 +801,52 @@ img, svg {
       });
     });
   </script>
+<!-- Persuasive Popup Modal -->
+<div id="ofertaPopup" class="modal-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:10000; align-items:center; justify-content:center;">
+  <div class="modal-content" style="background:white; padding:30px; border-radius:20px; max-width:500px; width:90%; text-align:center; position:relative; animation: modalFadeIn 0.3s ease-out;">
+    <button id="closePopup" style="position:absolute; top:15px; right:15px; background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--ink-light);">&times;</button>
+    <div style="font-size:3rem; margin-bottom:15px;">💡</div>
+    <h3 style="color:var(--ink-dark); margin-bottom:15px;">Você sabia?</h3>
+    <p style="color:var(--ink-light); margin-bottom:20px; line-height:1.6;">A <strong>Oferta Premium</strong> é a escolha favorita de mais de <strong>500 professores</strong>! Ela inclui mais de 2000 atividades e todos os bônus exclusivos por uma diferença mínima.</p>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <a href="https://checkout.crescendocomdeus.site/VCCL1O8SCUB8" class="btn-featured" style="width:100%; padding:15px; text-decoration:none;">Quero a Oferta Premium (Recomendado)</a>
+      <a href="https://checkout.crescendocomdeus.site/VCCL1O8SCVFW" class="btn-basic" style="width:100%; padding:12px; background:none; border:1px solid #ddd; color:var(--ink-light); text-decoration:none;">Continuar com Oferta Simples</a>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-overlay { display: flex; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btnSimples = document.getElementById('btn-oferta-simples');
+  const popup = document.getElementById('ofertaPopup');
+  const closePopup = document.getElementById('closePopup');
+  const goPremium = document.getElementById('goPremium');
+
+  if (btnSimples && popup) {
+    btnSimples.addEventListener('click', function(e) {
+      e.preventDefault();
+      popup.style.display = 'flex';
+    });
+  }
+
+  if (closePopup) {
+    closePopup.addEventListener('click', () => popup.style.display = 'none');
+  }
+
+
+
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) popup.style.display = 'none';
+  });
+});
+</script>
 </body>
 </html>
